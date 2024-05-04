@@ -4,16 +4,21 @@ from utils import *
 from spar_parse import parse_spar
 from magnit_parse import parse_magnit
 from lenta_parse import parse_lenta
+from smart_parse import parse_smart
+
 def main():
     options = set_settings()
     driver = webdriver.Chrome(options=options)
+    wait = WebDriverWait(driver, 5)
     # driver.execute_script("Object.defineProperty(navigator, 'webdriver', {get: () => undefined})")
-    # parse_spar(driver)
+    # parse_spar(driver, wait)
     # time.sleep(1)
-    # parse_magnit(driver)
-    # time.sleep(1)
-    parse_lenta(driver)
+    parse_magnit(driver, wait)
     time.sleep(1)
+    # parse_lenta(driver)
+    # time.sleep(1)
+    # parse_smart(driver)
+    # time.sleep(1)
 
 
 

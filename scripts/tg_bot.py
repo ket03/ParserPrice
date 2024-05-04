@@ -1,4 +1,4 @@
-import telebot
-from telebot import types
+from aiogram import Bot, Dispatcher
+from os import getenv
 
 bot = telebot.TeleBot('')
